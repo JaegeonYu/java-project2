@@ -13,4 +13,9 @@ public class Collatz {
         if (cnt == 500) return -1;
         else return cnt;
     }
+
+    public static void main(String[] args) {
+        Integer integer = 1;
+        System.out.println(integer.toString());
+    }
 }
