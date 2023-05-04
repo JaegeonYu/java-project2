@@ -1,6 +1,7 @@
 package com.example.javaproject2.challange;
 
 public class Collatz {
+    private static final String AX = "123";
     int solution(int num) {
         int cnt = 0;
         long n = num;

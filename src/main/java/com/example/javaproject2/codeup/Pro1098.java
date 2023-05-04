@@ -10,7 +10,7 @@ public class Pro1098 {
 
         for (int k = 0; k < n; k++) {
             int l = sc.nextInt(), d = sc.nextInt();
-            int x = sc.nextInt()-1, y = sc.nextInt()-1
+            int x = sc.nextInt()-1, y = sc.nextInt()-1;
             int i = 0, j = 0;
 
             if (d==0) while (i < l) {
