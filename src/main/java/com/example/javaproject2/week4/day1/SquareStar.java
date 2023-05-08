@@ -2,16 +2,16 @@ package com.example.javaproject2.week4.day1;
 
 import java.util.Scanner;
 
-public class StarStair {
+public class SquareStar {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        String stair = "**";
+        String star = "*";
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < i; j++) {
-                System.out.printf(" ");
+            for (int j = 0; j < i+1; j++) {
+                System.out.print(star);
             }
-            System.out.printf(stair + "\n");
+            System.out.printf("\n");
         }
     }
 }
