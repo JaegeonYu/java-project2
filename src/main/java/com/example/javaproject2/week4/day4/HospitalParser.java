@@ -7,20 +7,23 @@ import java.util.stream.Collectors;
 
 public class HospitalParser {
     List<Hospital> hospitals = new ArrayList<>();
+    private String path = "E:\\hospital\\hospitalInfofo.txt";
 
     public void readFile()  {
-        String path = "E:\\hospital\\hospitalInfofo.txt";
-
         try(BufferedReader br = new BufferedReader
                 (new InputStreamReader(new FileInputStream(path), "UTF-8"))) {
-            hospitals = br.lines().map(line -> {
-                String[] split = line.split(",");
-                return new Hospital(split[1], split[9], split[10]);
-            }).collect(Collectors.toList());
+            parseHospital(br);
         }  catch (IOException e) {
             throw new RuntimeException(e);
         }
 
+    }
+
+    private void parseHospital(BufferedReader br) {
+        hospitals = br.lines().map(line -> {
+            String[] split = line.split(",");
+            return new Hospital(split[1], split[9], split[10]);
+        }).collect(Collectors.toList());
     }
 
     public void printHospital(int index){
